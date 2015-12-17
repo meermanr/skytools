@@ -63,7 +63,7 @@ def set_tcp_keepalive(fd, keepalive = True,
     TCP_KEEPALIVE = getattr(socket, 'TCP_KEEPALIVE', None)
     SIO_KEEPALIVE_VALS = getattr(socket, 'SIO_KEEPALIVE_VALS', None)
     if TCP_KEEPIDLE is None and TCP_KEEPALIVE is None and sys.platform == 'darwin':
-        TCP_KEEPALIVE = 0x10
+        TCP_KEEPALIVE = 0x08
 
     # configure
     if TCP_KEEPCNT is not None:
